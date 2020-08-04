@@ -1,0 +1,92 @@
+.nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 5  ;
+}
+
+.logo a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo img {
+    width: 50px;
+}
+
+.logo span {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: white;
+    margin-left: 20px;
+    transition: all .4s ease-in-out;
+}
+
+span.hover {
+    color: var(--primary);
+}
+
+.primaryMenu {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+}
+
+.primaryMenu li {
+    margin: 0 20px;
+    color: white;
+    transition: all .2s ease-in-out;
+    position: relative;
+}
+
+.primaryMenu li:hover {
+    color: var(--primary);
+    cursor: pointer;
+    height: 100%;
+}
+
+.primaryMenu li::after {
+    content: '';
+    border-bottom: 2px solid var(--primary);
+    width: 0;
+    height: 1px;
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transition: all .2s ease-in-out;
+}
+
+.primaryMenu li:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+button.reservation {
+    font-weight: 700;
+    padding: 15px 30px;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    background-color: var(--primary);
+    cursor: pointer;
+    border: 1px solid var(--primary);
+    transition: all .2s ease-in-out;
+}
+
+button.reservation svg {
+    margin-right: 10px;
+}
+
+button.reservation:hover {
+    background: none !important;
+    border: 1px solid var(--primary);
+    color: var(--primary);
+}

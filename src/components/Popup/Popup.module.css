@@ -1,0 +1,44 @@
+.container {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 101;
+    background: rgba(255,255,255,.8);  
+    width: 100%;
+    height: 100%;
+    visibility: visible;
+}
+
+.hide {
+    visibility: hidden;
+}
+
+.container div {
+    padding: 50px;
+    background: white;
+    box-shadow: 0 0 15px rgba(0,0,0,.1);
+    text-align: center;
+    border-radius: 10px;
+    position: relative;
+}
+
+.container span {
+    font-size: 3rem;
+    color: var(--primary);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.container h6 {
+    font-size: 1.3rem;
+    line-height:.8rem;
+    color: white;
+    background: var(--primary);
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    padding:20px;
+    cursor: pointer;
+    border-radius: 50px;
+}

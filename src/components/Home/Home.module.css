@@ -1,0 +1,296 @@
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background-image: url('../../assets/resort.jpg');
+    background-color: rgba(0,0,0,.4);
+    background-blend-mode: overlay;
+    background-position: center;
+    position: relative;
+    z-index: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* Details
+===================== */
+
+.details {
+    padding: 0 50px;
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.details h6 {
+    text-transform: uppercase;
+    color: white;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    font-weight: 400;
+    overflow: hidden;
+}
+
+.details h1 {
+    font-size: 4rem;
+    color: white;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: capitalize;
+    overflow: hidden;
+}
+
+.details div {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    align-items: center;
+}
+
+.details span {
+    color: white;
+    font-weight: 400;
+    margin-right: 30px;
+}
+
+.details button.play {
+    background-color: white;
+    border: none;
+    border-radius: 50px;
+    color: #333333;
+    display: flex;
+    align-items: center;
+    height: auto;
+    padding: 20px;
+    position: relative;
+    transition: all .5s ease-in-out;
+}
+
+button.play.hover {
+    background: var(--primary);
+    color: white;
+    cursor: pointer;
+}
+
+.play svg {
+    position: absolute;
+    left: 55%;
+    transform: translateX(-50%);
+}
+
+.details button.play::after {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50px;
+    content: '';
+    border: .5px solid white;
+    padding: 30px;
+    background-color: none;
+}
+
+/* Bookings
+===================== */
+.bookings {
+    margin-top: auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.bookings div {
+    width: 80%;
+    padding: 30px 50px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.bookings div select {
+    outline: none;
+    border: none;
+    margin-top: 5px;
+    text-align: left;
+    margin-left: -4px;
+    width: 100%;
+    background: none;
+}
+
+.bookings div > span {
+    color: #ccc;
+    font-size: .8rem;
+    font-weight: 700;
+}
+
+.bookings div:nth-child(4) {
+    background-color: var(--primary);
+}
+
+.bookings div:nth-child(4) span {
+    color: white;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.bookings div:nth-child(4) span::after {
+    content: '';
+    border-bottom: 1px solid white;
+    width: 15%;
+    height: 1px;
+    position: absolute;
+    top: 50%;
+    left: 50px;
+    transform: translateY(-50%);
+}
+
+.bookings button.book {
+    color: white;
+    text-transform: uppercase;
+    background: none;
+    border: none;
+    text-align: left;
+    font-weight: 700;
+    margin-top: 5px;
+    cursor: pointer;
+    transition: all .4s ease-in-out;
+}
+
+.book.hover {
+    letter-spacing: 5px;
+}
+
+.bookings div:nth-child(5) {
+    background: none;
+}
+
+.scroll {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    animation: pointDown 2s ease infinite;
+}
+
+.scroll span {
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform:translate(-50%, 0) rotate(-90deg) ;
+    color: white !important;
+    font-weight: 400 !important;
+    font-size: 1.1rem !important; 
+}
+
+.scroll svg {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+}
+
+@keyframes pointDown {
+    from {
+        opacity: 0.5;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+/* Calendar
+===================== */
+.date {
+    position: absolute;
+    width: 20% !important;
+    border: none;
+    background: white;
+    text-align: right;
+    border-top: 2px solid var(--primary);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,.8);
+    overflow: hidden;
+    right: 20px;
+    bottom: 50%;
+    transform: translateY(50%);
+    visibility: hidden;
+}
+
+.date.open {
+    visibility: visible;
+}
+
+.date > span {
+    padding: 10px;
+    color: var(--primary);
+    top: -50px;
+    border-radius: 50px;
+    display: block;
+    font-size: .7rem;
+    cursor: pointer;
+}
+
+.date button {
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    text-align: center;
+}
+
+.date button:hover,
+.date button:focus,
+.date button:active,
+.date button:visited {
+    background: var(--primary);
+    color: white;
+    border: none;
+}
+
+/* Popup Show or Hide
+===================== */
+.show {
+    opacity: 1;
+    z-index: 100;
+}
+
+.hide {
+    opacity: 0;
+    z-index: -100;
+}
+
+
+/* Popup for Video
+===================== */
+.video {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,.8);
+    position: relative;
+}
+.video.hide {
+    display: none;
+}
+
+.video.show {
+    display: block;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.video span {
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    padding: 10px 15px;
+    line-height: 1rem;
+    border-radius: 50px;
+    color: white;
+    background-color: var(--primary);
+    cursor: pointer;
+}
