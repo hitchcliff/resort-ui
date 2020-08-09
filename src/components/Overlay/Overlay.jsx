@@ -8,15 +8,15 @@ const Overlay = () => {
     let paragraph = useRef(null)
     useEffect(() => {
         tl.to(heading, 1.5, {
-            opacity: 0,
+            opacity: .8,
             y: -50,
             ease: Expo.ease
         })
          .to(paragraph, 1, {
-             opacity: 0,
+             opacity: .5,
              y: -50,
              ease: Expo.ease
-         })
+         }, .8)
          .to(container, .5, {
              opacity: 0.5,
              top: "-100%",
